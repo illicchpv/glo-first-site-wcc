@@ -1,0 +1,53 @@
+<style>
+  wcc-contacts-form {
+    display: block;
+  }
+
+  .wccContactsForm {
+    display: block;
+
+    border-radius: 5px;
+    width: 380px;
+    height: 409px;
+    box-shadow: -5px 5px 0 0 #ffc41d;
+    background: #fff;
+    max-width: 380px;
+
+    padding: 48px 36px;
+    text-align: center;
+  }
+
+  .wccContactsForm__name {
+    margin-bottom: 17px;
+  }
+
+  .wccContactsForm__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.55556;
+    text-align: center;
+    color: #000;
+    margin-bottom: 29px;
+  }
+
+  .wccContactsForm__button {
+    margin-top: 28px;
+  }
+
+  .wccContactsForm button {
+    width: 100%;
+  }
+</style>
+<form class="wccContactsForm">
+  <h4 class="wccContactsForm__title">
+    Можете просто оставить заявку,<br>
+    я позвоню вам сегодня
+  </h4>
+
+  <wcc-input class="wccContactsForm__name" icon="user-icon.svg" placeholder="Ваше имя"></wcc-input>
+  <wcc-input class="wccContactsForm__phone" icon="phone-icon.svg" placeholder="Ваш телефон"></wcc-input>
+
+  <wcc-button class="wccContactsForm__button">Бесплатная консультация</wcc-button>
+</form>
+
+<body></body>

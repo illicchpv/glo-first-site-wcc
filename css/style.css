@@ -1,0 +1,55 @@
+
+
+:root {
+  --font-family: sans-serif;
+  --container-w: 945px;
+  --container-x-padding: 10px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+body {
+  font-family: var(--font-family);
+  background-color: #20202d;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+.container {
+  max-width: calc(var(--container-w) + 2 * var(--container-x-padding));
+  padding-inline: var(--container-x-padding);
+  width: 100%;
+  margin-inline: auto;
+  /* border: 1px solid red; */
+}
+
+.section {
+  padding-top: 64px;
+  padding-bottom: 92px;
+}
+
+wcc-hero {
+  padding-top: 50px;
+}
+
+wcc-hero-header {
+  margin-bottom: 105px;
+}
+
+wcc-hero-content {
+}
+
+wcc-contacts {
+}
