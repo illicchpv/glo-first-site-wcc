@@ -1,28 +1,27 @@
-// | Имя сниппета             | prefix          | scope      | описание                                    |
-// |--------------------------|-----------------|------------|----------------------------------------------|
-// | WCC Component Class      | wcc=class       | javascript | Полный класс компонента BaseComponent        |
-// | WCC Component Min Class  | wcc=class-min   | javascript | Минимальный класс компонента BaseComponent   |
-// | WCC Component Min0 Class | wcc=class-min0  | javascript | Min0 класс компонента BaseComponent          |
-// | WCC catch wcc-event      | wcc=catch-event | javascript | Обработка события созданного wcc компонентом |
-// | WCC HTML Skeleton        | wcc=html        | html       | Каркас HTML + style для компонента           |
-// | WCC Properties           | wcc=props       | javascript | Блок static get properties                   |
-// | WCC Property Item        | wcc=prop-item   | javascript | Одно свойство в блоке properties             |
-// | WCC Setup Event Listeners| wcc=events      | javascript | Настройка слушателей (onRef + emit)          |
-// | WCC Render List          | wcc=list        | javascript | Рендер списка (полный цикл)                  |
-// | WCC Static Template      | wcc=static-tpl  | javascript | static get template()                        |
-// | WCC Cache DOM            | wcc=cache       | javascript | Кэширование DOM (_cacheElements)             |
-// | WCC Watch Property       | wcc=watch       | javascript | Реактивность (propertyChangedCallback)       |
-// | WCC All Ready            | wcc=ready       | javascript | Хук готовности (onAllComponentsReady)        |
-// | WCC Fetch Data           | wcc=fetch       | javascript | Асинхронная загрузка (fetch)                 |
-// | WCC Inner Template HTML  | wcc=inner-html  | html       | Блок innerTemplate в HTML                    |
-// | WCC Conditional HTML     | wcc=if          | html       | Условный блок if/endif                       |
-// | WCC Include Block        | wcc=include     | html       | Блок include для интерполяции                |
-// | WCC Slot Named           | wcc=slot        | html       | Именованный слот                             |
-// | WCC Slot Default         | wcc=slot-def    | html       | Слот по умолчанию                            |
-// | WCC Value Interpolation  | wcc=val         | html       | Интерполяция ${this.prop}                    |
+// | Имя сниппета             | prefix          | scope| описание                                     |
+// |--------------------------|-----------------|-----------------------------------------------------|
+// | WCC Component Class      | wcc=class       | JS   | Полный класс компонента BaseComponent        |
+// | WCC Component Min Class  | wcc=class-min   | JS   | Минимальный класс компонента BaseComponent   |
+// | WCC Component Min0 Class | wcc=class-min0  | JS   | Min0 класс компонента BaseComponent          |
+// | WCC catch wcc-event      | wcc=catch-event | JS   | Обработка события созданного wcc компонентом |
+// | WCC HTML Skeleton        | wcc=html        | html | Каркас HTML для компонента                   |
+// | WCC Properties           | wcc=props       | JS   | Блок static get properties                   |
+// | WCC Setup Event Listeners| wcc=events      | JS   | Настройка слушателей (onRef + emit)          |
+// | WCC Render List          | wcc=list        | JS   | Рендер списка (полный цикл)                  |
+// | WCC Cache DOM            | wcc=cache       | JS   | Кэширование DOM (_cacheElements)             |
+// | WCC Watch Property       | wcc=watch       | JS   | Реактивность (propertyChangedCallback)       |
+// | WCC All Ready            | wcc=ready       | JS   | Хук готовности (onAllComponentsReady)        |
+// | WCC Fetch Data           | wcc=fetch       | JS   | Асинхронная загрузка (fetch)                 |
+// | WCC Inner Template HTML  | wcc=inner-html  | html | Блок innerTemplate в HTML                    |
+// | WCC Conditional HTML     | wcc=if          | html | Условный блок if/endif                       |
+// | WCC Include Block        | wcc=include     | html | Блок include для интерполяции                |
+// | WCC Slot Named           | wcc=slot        | html | Именованный слот                             |
+// | WCC Value Interpolation  | wcc=val         | html | Интерполяция ${this.prop}                    |
+// | WCC Route Enter js       | wcc=route-enter | JS   | Обработчик событий роутера                   |
+
 // ------------
 // "// WORKSPACE_NAME: ${WORKSPACE_NAME} // first-site-wcc",
-// "// RELATIVE_FILEPATH: ${RELATIVE_FILEPATH} // wcc-section\\WccProjects\\WccProjects.js",
+// "// RELATIVE_FILEPATH: ${RELATIVE_FILEPATH} (${RELATIVE_FILEPATH/[\\\\]/\\//g} wcc-section/WccProjects/WccProjects.js)",
 // "// TM_DIRECTORY: ${TM_DIRECTORY} // D:\\MyLearn\\glo-academy\\first-site\\first-site-wcc\\wcc-section\\WccProjects",
 // "// TM_FILEPATH: ${TM_FILEPATH} // D:\\MyLearn\\glo-academy\\first-site\\first-site-wcc\\wcc-section\\WccProjects\\WccProjects.js",
 // "// TM_FILENAME: ${TM_FILENAME} // WccProjects.js",
@@ -32,7 +31,7 @@
     "prefix": "wcc=class",
     "scope": "javascript",
     "body": [
-      "// подключить: <script data-wcc type=\"module\" src=\"${TM_DIRECTORY/(.*\\\\([^\\\\]+)\\\\[^\\\\]+)$/$2/}/${TM_FILENAME_BASE}/${TM_FILENAME_BASE}.js\"></script>",
+      "// подключить: <script data-wcc type=\"module\" src=\"${RELATIVE_FILEPATH/[\\\\]/\\//g}\"></script>",
       "const myTemplate = ``; // для прод, вставить сюда содержимое файла ${TM_FILENAME_BASE}.html",
       "//",
       "export class ${TM_FILENAME_BASE} extends BaseComponent {",
@@ -103,7 +102,7 @@
     "prefix": "wcc=class-min",
     "scope": "javascript",
     "body": [
-      "// подключить: <script data-wcc type=\"module\" src=\"${TM_DIRECTORY/(.*\\\\([^\\\\]+)\\\\[^\\\\]+)$/$2/}/${TM_FILENAME_BASE}/${TM_FILENAME_BASE}.js\"></script>",
+      "// подключить: <script data-wcc type=\"module\" src=\"${RELATIVE_FILEPATH/[\\\\]/\\//g}\"></script>",
       "const myTemplate = ``; // для прод, вставить сюда содержимое файла ${TM_FILENAME_BASE}.html",
       "//",
       "export class ${TM_FILENAME_BASE} extends BaseComponent {",
@@ -126,7 +125,7 @@
     "prefix": "wcc=class-min0",
     "scope": "javascript",
     "body": [
-      "// подключить: <script data-wcc type=\"module\" src=\"${TM_DIRECTORY/(.*\\\\([^\\\\]+)\\\\[^\\\\]+)$/$2/}/${TM_FILENAME_BASE}/${TM_FILENAME_BASE}.js\"></script>",
+      "// подключить: <script data-wcc type=\"module\" src=\"${RELATIVE_FILEPATH/[\\\\]/\\//g}\"></script>",
       "const myTemplate = ``; // для прод, вставить сюда содержимое файла ${TM_FILENAME_BASE}.html",
       "//",
       "export class ${TM_FILENAME_BASE} extends BaseComponent {",
@@ -136,16 +135,6 @@
       "BaseComponent.registerWcc(${TM_FILENAME_BASE}, import.meta.url, myTemplate);"
     ],
     "description": "Min0 класс компонента BaseComponent"
-  },
-  "WCC Route Enter js": {
-    "prefix": "wcc=route-enter",
-    "scope": "javascript",
-    "body": [
-      "onRouteEnter({path, routeParam}) {",
-      "  // this._render...",
-      "}"
-    ],
-    "description": "Обработка смены маршрута"
   },
   "WCC catch wcc-event js": {
     "prefix": "wcc=catch-event",
@@ -266,6 +255,7 @@
     "description": "Асинхронная загрузка данных"
   },
 
+
   "WCC Skeleton HTML": {
     "prefix": "wcc=html",
     "scope": "html",
@@ -335,5 +325,16 @@
       "\\${this.${1:propName}}"
     ],
     "description": "Интерполяция значения"
+  },
+
+  "WCC Route Enter js": {
+    "prefix": "wcc=route-enter",
+    "scope": "javascript",
+    "body": [
+      "onRouteEnter({path, routeParam}) {",
+      "  // this._render...",
+      "}"
+    ],
+    "description": "Обработка смены маршрута"
   }
 }
