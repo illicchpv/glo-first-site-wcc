@@ -1,2 +1,177 @@
-@media (max-width: 640px) {
+@media (max-width: 1100px) {
+  .wccAvatar {
+    width: 300px;
+    height: 300px;
+    border-width: 10px;
+  }
 }
+
+@media (max-width: 900px) {
+  .wccHeroContent {
+    flex-direction: column;
+  }
+
+  wcc-avatar {
+    order: 0;
+    margin-bottom: 17px;
+  }
+
+  .wccHeroContent__text {
+    order: 1;
+    text-align: center;
+  }
+
+  .wccSlide {
+    flex-direction: column;
+    row-gap: 46px;
+    align-items: center;
+  }
+
+  .wccSlide__img {
+    width: 80%;
+  }
+
+  .wccContacts__block {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 58px;
+  }
+}
+
+@media (max-width: 560px) {
+  .wccHero {
+    padding-bottom: 75px;
+  }
+
+  .wccHeroContent_subTitle {
+    font-size: 16px;
+  }
+
+  wcc-hero-header {
+    margin-bottom: 38px;
+  }
+
+  .wccSocial {
+    gap: 10px;
+  }
+
+  .wccAvatar {
+    width: 113px;
+    height: 113px;
+    border-width: 4px;
+    background-size: 100%;
+    background-position: center top;
+  }
+
+  .wccHeroContent__title {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .wccHeroContent__desc {
+    font-size: 14px;
+  }
+
+  .wccHeroContent__button {
+    margin-top: 34px;
+  }
+
+  .wccButton {
+    font-size: 10px;
+  }
+
+  .section {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+
+  .wccSectionTitle {
+    font-size: 19px;
+    margin-bottom: 40px;
+  }
+
+  .wccFeaturesBlock {
+    row-gap: 30px;
+  }
+
+  .wccFeaturesItem__title {
+    font-size: 18px;
+  }
+
+  .wccFeaturesItem__text {
+    font-size: 14px;
+  }
+
+  .wccSlide__title {
+    font-size: 18px;
+  }
+
+  .wccSlide__subTitle {
+    font-size: 18px;
+  }
+
+  .wccSlide__subText {
+    font-size: 14px;
+  }
+
+  .wccContactsForm__title {
+    font-size: 15px;
+  }
+
+  .wccContactsText__title {
+    font-size: 18px;
+  }
+
+  .wccContactsText__link {
+    font-size: 14px;
+  }
+
+  .wccSlide__text {
+    row-gap: 30px;
+  }
+
+  .wccSlide__feedback,
+  .wccSlide__time,
+  .wccSlide__cost {
+    flex-basis: 80%;
+  }
+
+  .wccContactsForm {
+    padding: 40px 19px;
+  }
+}
+
+@media (max-width: 500px) {
+  .wccContactsForm {
+    max-width: 100%;
+    width: 100%;
+    max-width: none;
+  }
+
+  wcc-input input {
+    width: 100px;
+  }
+
+
+
+  .wccContactsForm button {
+    width: auto;
+  }
+
+  .wccContactsText__phone,
+  .wccContactsText__mail {
+    flex-basis: 80%;
+  }
+
+  .wccContactsText__link {
+    display: block;
+    margin-bottom: 13px;
+  }
+
+  .wccContactsText__policy {
+    display: block;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {}
