@@ -11,11 +11,11 @@ window.addEventListener('wcc:all-components-ready', () => {
       bulletActiveClass: 'projects-bullet-active',
       clickable: true,
     },
-    // loop: true, // включаем бесконечный цикл
-    // autoplay: {
-    //   delay: 3000, // Delay between transitions (in ms)
-    //   disableOnInteraction: false, // Continue autoplay after user interaction
-    // },
+    loop: true, // включаем бесконечный цикл
+    autoplay: {
+      delay: 3000, // Delay between transitions (in ms)
+      disableOnInteraction: false, // Continue autoplay after user interaction
+    },
   });
 });
 
