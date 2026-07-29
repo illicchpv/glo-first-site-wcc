@@ -1,4 +1,4 @@
-// подключить: <script data-wcc type="module" src="wcc/WccFeaturesItem/WccFeaturesItem.js"></script>
+// подключить: <script data-wcc type="module" src="wcc-section/WccFeatures/WccFeaturesItem/WccFeaturesItem.js"></script>
 const myTemplate = ``; // для прод, вставить сюда содержимое файла WccFeaturesItem.html
 //
 export class WccFeaturesItem extends BaseComponent {

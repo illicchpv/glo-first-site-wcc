@@ -1,7 +1,7 @@
-// подключить: <script data-wcc type="module" src="wcc/WccProjectTextItem/WccProjectTextItem.js"></script>
-const myTemplate = ``; // для прод, вставить сюда содержимое файла WccProjectTextItem.html
+// подключить: <script data-wcc type="module" src="wcc-section/WccFeatures/WccFeaturesBlock/WccFeaturesBlock.js"></script>
+const myTemplate = ``; // для прод, вставить сюда содержимое файла WccFeaturesBlock.html
 //
-export class WccProjectTextItem extends BaseComponent {
+export class WccFeaturesBlock extends BaseComponent {
   constructor() {
     super(); this._refs = {};
   }
@@ -61,4 +61,4 @@ export class WccProjectTextItem extends BaseComponent {
   // }
 }
 
-BaseComponent.registerWcc(WccProjectTextItem, import.meta.url, myTemplate);
+BaseComponent.registerWcc(WccFeaturesBlock, import.meta.url, myTemplate);
