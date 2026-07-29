@@ -1,5 +1,24 @@
 // подключить: <script data-wcc type="module" src="wcc-section/WccHero/WccAvatar/WccAvatar.js"></script>
-const myTemplate = ``; // для прод, вставить сюда содержимое файла WccAvatar.html
+const myTemplate = `<style>
+  wcc-avatar {
+    display: inline-block;
+  }
+  .wccAvatar {
+    display: block;
+    width: 389px;
+    height: 389px;
+    border-radius: 50%;
+    background-image: url('img/avatar.jpg');
+    background-repeat: no-repeat;
+    background-position: center top -50px;
+    border: 13px solid #fff;
+  }
+</style>
+<div class="wccAvatar wow wow animate__animated animate__fadeIn" data-wow-delay="3.2s">
+</div>
+
+<body></body>
+`; // для прод, вставить сюда содержимое файла WccAvatar.html
 //
 export class WccAvatar extends BaseComponent {
 

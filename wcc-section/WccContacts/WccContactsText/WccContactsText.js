@@ -1,5 +1,85 @@
 // подключить: <script data-wcc type="module" src="wcc/WccContactsText/WccContactsText.js"></script>
-const myTemplate = ``; // для прод, вставить сюда содержимое файла WccContactsText.html
+const myTemplate = `<style>
+  wcc-contacts-text {
+    display: block;
+    flex-basis: 50%;
+  }
+
+  .wccContactsText {
+    display: block;
+  }
+
+  .wccContactsText__data {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 53px;
+  }
+
+  .wccContactsText__phone,
+  .wccContactsText__mail {
+    flex-basis: 50%;
+  }
+
+  .wccContactsText__social {
+    flex-basis: 100%;
+    margin-bottom: 42px;
+  }
+
+  .wccContactsText__title {
+    font-weight: 700;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 15px;
+  }
+
+  .wccContactsText__link {
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+    margin-right: 37px;
+  }
+
+  .wccContactsText__link:hover {
+    text-decoration: underline;
+  }
+
+  .wccContactsText__policy {
+    font-weight: 400;
+    font-size: 15px;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #a5a5a5;
+    margin-top: 72px;
+    display: inline-block;
+  }
+</style>
+<div class="wccContactsText">
+  <div class="wccContactsText__data">
+    <div class="wccContactsText__phone">
+      <h4 class="wccContactsText__title">Телефон</h4>
+      <a class="wccContactsText__link" href="tel:+79991234567">+7 999 123 45 67</a>
+    </div>
+
+    <div class="wccContactsText__mail">
+      <h4 class="wccContactsText__title">Почта</h4>
+      <a class="wccContactsText__link" href="mailto:mail@mail.ru">mail@mail.ru</a>
+    </div>
+
+    <div class="wccContactsText__social">
+      <h4 class="wccContactsText__title">Соцсети</h4>
+      <a class="wccContactsText__link" href="#">t.me/ivanov</a>
+      <a class="wccContactsText__link" href="#">vk.me/ivanov</a>
+      <a class="wccContactsText__link" href="#">fb.me/ivanov</a>
+    </div>
+  </div>
+
+  <wcc-social></wcc-social>
+
+  <a class="wccContactsText__policy" href="">Политика конфиденциальности</a>
+</div>
+
+<body></body>
+`; // для прод, вставить сюда содержимое файла WccContactsText.html
 //
 export class WccContactsText extends BaseComponent {
 

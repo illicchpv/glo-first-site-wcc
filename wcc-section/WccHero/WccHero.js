@@ -1,5 +1,25 @@
 // подключить: <script data-wcc type="module" src="wcc-section/WccHero/WccHero.js"></script>
-const myTemplate = ``; // для прод, вставить сюда содержимое файла WccHero.html
+const myTemplate = `<style>
+  wcc-hero {
+    display: block;
+  }
+  .wccHero {
+    display: block;
+    background: linear-gradient(0.01deg, #000 0%, rgba(0, 0, 0, 0) 95.44%);
+    padding-bottom: 155px;
+  }
+</style>
+<header class="wccHero">
+  <div class="container">
+
+    <slot>
+
+    </slot>
+  </div>
+</header>
+
+<body></body>
+`; // для прод, вставить сюда содержимое файла WccHero.html
 //
 export class WccHero extends BaseComponent {
 

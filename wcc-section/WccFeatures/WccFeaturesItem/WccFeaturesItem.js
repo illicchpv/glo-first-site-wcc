@@ -1,5 +1,39 @@
 // подключить: <script data-wcc type="module" src="wcc-section/WccFeatures/WccFeaturesItem/WccFeaturesItem.js"></script>
-const myTemplate = ``; // для прод, вставить сюда содержимое файла WccFeaturesItem.html
+const myTemplate = `<style>
+  wcc-features-item {
+    display: block;
+  }
+
+  .wccFeaturesItem {
+    display: block;
+    width: 288px;
+  }
+
+  .wccFeaturesItem__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.16667;
+    color: #fff;
+    margin-top: 22px;
+    margin-bottom: 16px;
+  }
+
+  .wccFeaturesItem__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #fff;
+  }
+</style>
+<div class="wccFeaturesItem">
+  <img class="wccFeaturesItem__img" src="" alt="wccFeaturesItem__title">
+  <h3 class="wccFeaturesItem__title">wccFeaturesItem__title</h3>
+  <p class="wccFeaturesItem__text">Предоставлю все документы для бухгалтерии: договоры, счета и акты. Работаю как ИП без
+    НДС.</p>
+</div>
+
+<body></body>
+`; // для прод, вставить сюда содержимое файла WccFeaturesItem.html
 //
 export class WccFeaturesItem extends BaseComponent {
   constructor() {

@@ -1,5 +1,23 @@
 // подключить: <script data-wcc type="module" src="wcc/WccSocial/WccSocial.js"></script>
-const myTemplate = ``; // для прод, вставить сюда содержимое файла WccSocial.html
+const myTemplate = `<style>
+  wccSocial {
+    display: inline-block;
+  }
+
+  .wccSocial {
+    display: flex;
+    gap: 20px;
+  }
+</style>
+<div class="wccSocial">
+  <a class="wccSocial__link" href=""><img src="img/social/github.svg" alt="github"></a>
+  <a class="wccSocial__link" href=""><img src="img/social/twitter.svg" alt="twitter"></a>
+  <a class="wccSocial__link" href=""><img src="img/social/instagram.svg" alt="instagram"></a>
+  <a class="wccSocial__link" href=""><img src="img/social/facebook.svg" alt="facebook"></a>
+</div>
+
+<body></body>
+`; // для прод, вставить сюда содержимое файла WccSocial.html
 //
 export class WccSocial extends BaseComponent {
 
