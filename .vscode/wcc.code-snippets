@@ -1,8 +1,8 @@
 // | Имя сниппета             | prefix          | scope      | описание                                    |
 // |--------------------------|-----------------|------------|----------------------------------------------|
 // | WCC Component Class      | wcc=class       | javascript | Полный класс компонента BaseComponent        |
-// | WCC Component Min Class  | wcc=min-class   | javascript | Минимальный класс компонента BaseComponent   |
-// | WCC Component Min0 Class | wcc=Min0-class  | javascript | Min0 класс компонента BaseComponent          |
+// | WCC Component Min Class  | wcc=class-min   | javascript | Минимальный класс компонента BaseComponent   |
+// | WCC Component Min0 Class | wcc=class-min0  | javascript | Min0 класс компонента BaseComponent          |
 // | WCC catch wcc-event      | wcc=catch-event | javascript | Обработка события созданного wcc компонентом |
 // | WCC HTML Skeleton        | wcc=html        | html       | Каркас HTML + style для компонента           |
 // | WCC Properties           | wcc=props       | javascript | Блок static get properties                   |
@@ -20,8 +20,15 @@
 // | WCC Slot Named           | wcc=slot        | html       | Именованный слот                             |
 // | WCC Slot Default         | wcc=slot-def    | html       | Слот по умолчанию                            |
 // | WCC Value Interpolation  | wcc=val         | html       | Интерполяция ${this.prop}                    |
+// ------------
+// "// WORKSPACE_NAME: ${WORKSPACE_NAME} // first-site-wcc",
+// "// RELATIVE_FILEPATH: ${RELATIVE_FILEPATH} // wcc-section\\WccProjects\\WccProjects.js",
+// "// TM_DIRECTORY: ${TM_DIRECTORY} // D:\\MyLearn\\glo-academy\\first-site\\first-site-wcc\\wcc-section\\WccProjects",
+// "// TM_FILEPATH: ${TM_FILEPATH} // D:\\MyLearn\\glo-academy\\first-site\\first-site-wcc\\wcc-section\\WccProjects\\WccProjects.js",
+// "// TM_FILENAME: ${TM_FILENAME} // WccProjects.js",
+// "// TM_FILENAME_BASE: ${TM_FILENAME_BASE} // WccProjects",
 {
-  "WCC Component Class": {
+  "WCC Component Class js": {
     "prefix": "wcc=class",
     "scope": "javascript",
     "body": [
@@ -92,8 +99,8 @@
     ],
     "description": "Полный класс компонента BaseComponent (с закомментированными примерами)"
   },
-  "WCC Component Min Class": {
-    "prefix": "wcc=min-class",
+  "WCC Component Class Min js": {
+    "prefix": "wcc=class-min",
     "scope": "javascript",
     "body": [
       "// подключить: <script data-wcc type=\"module\" src=\"${TM_DIRECTORY/(.*\\\\([^\\\\]+)\\\\[^\\\\]+)$/$2/}/${TM_FILENAME_BASE}/${TM_FILENAME_BASE}.js\"></script>",
@@ -115,8 +122,8 @@
     ],
     "description": "Минимальный класс компонента BaseComponent"
   },
-  "WCC Component Min0 Class": {
-    "prefix": "wcc=min0-class",
+  "WCC Component Class Min0 js": {
+    "prefix": "wcc=class-min0",
     "scope": "javascript",
     "body": [
       "// подключить: <script data-wcc type=\"module\" src=\"${TM_DIRECTORY/(.*\\\\([^\\\\]+)\\\\[^\\\\]+)$/$2/}/${TM_FILENAME_BASE}/${TM_FILENAME_BASE}.js\"></script>",
@@ -130,7 +137,7 @@
     ],
     "description": "Min0 класс компонента BaseComponent"
   },
-  "WCC Route Enter": {
+  "WCC Route Enter js": {
     "prefix": "wcc=route-enter",
     "scope": "javascript",
     "body": [
@@ -140,7 +147,7 @@
     ],
     "description": "Обработка смены маршрута"
   },
-  "WCC catch wcc-event": {
+  "WCC catch wcc-event js": {
     "prefix": "wcc=catch-event",
     "scope": "javascript",
     "body": [
@@ -152,25 +159,7 @@
     ],
     "description": "Обработка события созданного wcc компонентом"
   },
-  "WCC HTML Skeleton": {
-    "prefix": "wcc=html",
-    "scope": "html",
-    "body": [
-      "<style>",
-      "  .${TM_FILENAME_BASE/^([A-Z])(.*)/${1:/downcase}$2/} {",
-      "    display: block; background-color: #f0f0f0;",
-      "  }",
-      "</style>",
-      "<div class=\"${TM_FILENAME_BASE/^([A-Z])(.*)/${1:/downcase}$2/}\">",
-      "  ${TM_FILENAME_BASE}",
-      "  [<slot name=\"\"></slot>]",
-      "  <div class=\"list-container\"></div>",
-      "</div>",
-      "<body></body>"
-    ],
-    "description": "Каркас HTML для компонента"
-  },
-  "WCC Properties": {
+  "WCC Properties js": {
     "prefix": "wcc=props",
     "scope": "javascript",
     "body": [
@@ -186,7 +175,7 @@
     ],
     "description": "Блок свойств static get properties"
   },
-  "WCC Setup Event Listeners": {
+  "WCC Setup Event Listeners js": {
     "prefix": "wcc=events",
     "scope": "javascript",
     "body": [
@@ -202,7 +191,7 @@
     ],
     "description": "Настройка слушателей событий (onRef + emit)"
   },
-  "WCC Render List": {
+  "WCC Render List js": {
     "prefix": "wcc=list",
     "scope": "javascript",
     "body": [
@@ -222,6 +211,82 @@
       "}"
     ],
     "description": "Рендер списка через innerTemplate (полный цикл)"
+  },
+  "WCC Cache DOM js": {
+    "prefix": "wcc=cache",
+    "scope": "javascript",
+    "body": [
+      "_cacheElements() {",
+      "  this._refs = {",
+      "    ${1:elementName}: this.querySelector('.${2:selector}'),",
+      "    $0",
+      "  };",
+      "}"
+    ],
+    "description": "Кэширование ссылок на DOM элементы в this._refs"
+  },
+  "WCC Watch Property js": {
+    "prefix": "wcc=watch",
+    "scope": "javascript",
+    "body": [
+      "propertyChangedCallback(name, oldValue, newValue) {",
+      "  super.propertyChangedCallback(name, oldValue, newValue);",
+      "  if (name === '${1:propName}') {",
+      "    this._update${2:Feature}();",
+      "  }",
+      "}"
+    ],
+    "description": "Реакция на изменение свойств"
+  },
+  "WCC All Ready js": {
+    "prefix": "wcc=ready",
+    "scope": "javascript",
+    "body": [
+      "onAllComponentsReady() {",
+      "  $0",
+      "}"
+    ],
+    "description": "Хук готовности всех компонентов"
+  },
+  "WCC Fetch Data js": {
+    "prefix": "wcc=fetch",
+    "scope": "javascript",
+    "body": [
+      "async _fetch${1:Data}() {",
+      "  try {",
+      "    const response = await fetch('${2:api/endpoint}');",
+      "    if (!response.ok) throw new Error(response.statusText);",
+      "    const data = await response.json();",
+      "    this.${3:items} = data;",
+      "  } catch (err) {",
+      "    console.error('Failed to fetch ${1}:', err);",
+      "  }",
+      "}"
+    ],
+    "description": "Асинхронная загрузка данных"
+  },
+
+  "WCC Skeleton HTML": {
+    "prefix": "wcc=html",
+    "scope": "html",
+    "body": [
+      "<style>",
+      "  ${TM_FILENAME_BASE} {",
+      "    display: inline-block;",
+      "  }",
+      "  .${TM_FILENAME_BASE/^([A-Z])(.*)/${1:/downcase}$2/} {",
+      "    display: block;",
+      "    background-color: #f0f0f0;",
+      "  }",
+      "</style>",
+      "<div class=\"${TM_FILENAME_BASE/^([A-Z])(.*)/${1:/downcase}$2/}\">",
+      "  ${TM_FILENAME_BASE}",
+      "  [<slot name=\"\"></slot>]",
+      "  <div class=\"list-container\"></div>",
+      "</div>",
+      "<body></body>"
+    ],
+    "description": "Каркас HTML для компонента"
   },
   "WCC Inner Template HTML": {
     "prefix": "wcc=inner-html",
@@ -245,7 +310,7 @@
     ],
     "description": "Условный блок (if/endif)"
   },
-  "WCC Include Block": {
+  "WCC Include Block HTML": {
     "prefix": "wcc=include",
     "scope": "html",
     "body": [
@@ -255,60 +320,7 @@
     ],
     "description": "Блок include для интерполяции (${this.prop})"
   },
-  "WCC Cache DOM": {
-    "prefix": "wcc=cache",
-    "scope": "javascript",
-    "body": [
-      "_cacheElements() {",
-      "  this._refs = {",
-      "    ${1:elementName}: this.querySelector('.${2:selector}'),",
-      "    $0",
-      "  };",
-      "}"
-    ],
-    "description": "Кэширование ссылок на DOM элементы в this._refs"
-  },
-  "WCC Watch Property": {
-    "prefix": "wcc=watch",
-    "scope": "javascript",
-    "body": [
-      "propertyChangedCallback(name, oldValue, newValue) {",
-      "  super.propertyChangedCallback(name, oldValue, newValue);",
-      "  if (name === '${1:propName}') {",
-      "    this._update${2:Feature}();",
-      "  }",
-      "}"
-    ],
-    "description": "Реакция на изменение свойств"
-  },
-  "WCC All Ready": {
-    "prefix": "wcc=ready",
-    "scope": "javascript",
-    "body": [
-      "onAllComponentsReady() {",
-      "  $0",
-      "}"
-    ],
-    "description": "Хук готовности всех компонентов"
-  },
-  "WCC Fetch Data": {
-    "prefix": "wcc=fetch",
-    "scope": "javascript",
-    "body": [
-      "async _fetch${1:Data}() {",
-      "  try {",
-      "    const response = await fetch('${2:api/endpoint}');",
-      "    if (!response.ok) throw new Error(response.statusText);",
-      "    const data = await response.json();",
-      "    this.${3:items} = data;",
-      "  } catch (err) {",
-      "    console.error('Failed to fetch ${1}:', err);",
-      "  }",
-      "}"
-    ],
-    "description": "Асинхронная загрузка данных"
-  },
-  "WCC Slot Named": {
+  "WCC Slot Named HTML": {
     "prefix": "wcc=slot",
     "scope": "html",
     "body": [
@@ -316,7 +328,7 @@
     ],
     "description": "Именованный слот"
   },
-  "WCC Value Interpolation": {
+  "WCC Value Interpolation HTML": {
     "prefix": "wcc=val",
     "scope": "html",
     "body": [
